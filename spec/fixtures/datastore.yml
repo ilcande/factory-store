@@ -1,0 +1,19 @@
+products:
+  KEYRING:
+    name: Keyring
+    price: 3.00
+  POSTER:
+    name: Poster
+    price: 10.00
+  MAGNET:
+    name: Magnet
+    price: 1.50
+discounts:
+  KEYRING:
+    BuyXGetYFree:
+      min_num_items: 2
+      value: 1
+  POSTER:
+    BulkPurchase:
+      min_num_items: 3
+      value: 7.50

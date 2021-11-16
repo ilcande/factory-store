@@ -1,0 +1,19 @@
+products:
+  VOUCHER:
+    name: Voucher
+    price: 5.00
+  TSHIRT:
+    name: T-Shirt
+    price: 20.00
+  MUG:
+    name: Coffee Mug
+    price: 7.50
+discounts:
+  VOUCHER:
+    BuyXGetYFree:
+      min_num_items: 2
+      value: 1
+  TSHIRT:
+    BulkPurchase:
+      min_num_items: 3
+      value: 19
