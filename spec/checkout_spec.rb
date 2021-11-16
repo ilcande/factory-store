@@ -29,6 +29,41 @@ describe Checkout do
 
       it { expect(checkout.total).to eq 14.5 }
     end
-  end
 
+    context 'of %w(KEYRING POSTER KEYRING)' do
+      before do
+        checkout.scan('KEYRING')
+        checkout.scan('POSTER')
+        checkout.scan('KEYRING')
+      end
+
+      it { expect(checkout.total).to eq 13.0 }
+    end
+
+    context 'of %w(POSTER POSTER POSTER KEYRING POSTER)' do
+      before do
+        checkout.scan('POSTER')
+        checkout.scan('POSTER')
+        checkout.scan('POSTER')
+        checkout.scan('KEYRING')
+        checkout.scan('POSTER')
+      end
+
+      it { expect(checkout.total).to eq 33.0 }
+    end
+
+    context 'of %w(KEYRING POSTER KEYRING KEYRING MAGNET POSTER POSTER)' do
+      before do
+        checkout.scan('KEYRING')
+        checkout.scan('POSTER')
+        checkout.scan('KEYRING')
+        checkout.scan('KEYRING')
+        checkout.scan('MAGNET')
+        checkout.scan('POSTER')
+        checkout.scan('POSTER')
+      end
+
+      it { expect(checkout.total).to eq 30.0 }
+    end
+  end
 end
