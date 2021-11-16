@@ -1,0 +1,38 @@
+{
+  "products":
+  {
+    "VOUCHER":
+    {
+      "name":"Voucher",
+      "price": 5.0
+    },
+    "TSHIRT":
+    {
+      "name":"T-Shirt",
+      "price": 20.0
+    },
+    "MUG":
+    {
+      "name":"Coffee Mug",
+      "price": 7.5
+    }
+  },
+  "discounts":
+  {
+    "VOUCHER":
+    {
+      "BuyXGetYFree":
+      {
+        "min_items_per_promo": 2,
+        "value" :1
+      }
+    },
+    "TSHIRT":{
+      "BulkPurchase":
+      {
+        "min_items_per_promo": 3,
+        "value": 19
+      }
+    }
+  }
+}

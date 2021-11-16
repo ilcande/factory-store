@@ -11,9 +11,9 @@ products:
 discounts:
   VOUCHER:
     BuyXGetYFree:
-      min_num_items: 2
+      min_items_per_promo: 2
       value: 1
   TSHIRT:
     BulkPurchase:
-      min_num_items: 3
+      min_items_per_promo: 3
       value: 19
