@@ -67,3 +67,37 @@ class Checkout
     @discounts
   end
 end
+
+ch_1 = Checkout.new
+ch_1.scan("VOUCHER")
+ch_1.scan("TSHIRT")
+ch_1.scan("MUG")
+
+puts ch_1.total
+
+ch_2 = Checkout.new
+ch_2.scan("VOUCHER")
+ch_2.scan("TSHIRT")
+ch_2.scan("VOUCHER")
+
+puts ch_2.total
+
+ch_3 = Checkout.new
+ch_3.scan("TSHIRT")
+ch_3.scan("TSHIRT")
+ch_3.scan("VOUCHER")
+ch_3.scan("TSHIRT")
+ch_3.scan("TSHIRT")
+
+puts ch_3.total
+
+ch_4 = Checkout.new
+ch_4.scan("VOUCHER")
+ch_4.scan("TSHIRT")
+ch_4.scan("VOUCHER")
+ch_4.scan("VOUCHER")
+ch_4.scan("MUG")
+ch_4.scan("TSHIRT")
+ch_4.scan("TSHIRT")
+
+puts ch_4.total
