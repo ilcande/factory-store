@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative '../../lib/rules/bulk_purchase'
 
 describe BulkPurchase do
@@ -10,7 +12,7 @@ describe BulkPurchase do
 
     before do
       num_items.times do
-        list << { "name"=>"Poster", "price"=>price }
+        list << { 'name' => 'Poster', 'price' => price }
       end
     end
 

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative '../../lib/rules/min_items_per_promo'
 
 describe MinItemsPerPromo do

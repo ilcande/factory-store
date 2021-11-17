@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative '../../lib/rules/buy_x_get_y_free'
 
 describe BuyXGetYFree do
@@ -10,7 +12,7 @@ describe BuyXGetYFree do
 
     before(:each) do
       num_items.times do
-        list << { "name"=>"Keyring", "price"=>price }
+        list << { 'name' => 'Keyring', 'price' => price }
       end
     end
 

@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# class MinItemsPerPromo
 class MinItemsPerPromo
   attr_accessor :min_items_per_promo, :value
 
@@ -6,6 +9,7 @@ class MinItemsPerPromo
     @value = value
   end
 
+  # it returns a boolean whether rule applies or not
   def applies_to(items)
     items.length >= @min_items_per_promo
   end

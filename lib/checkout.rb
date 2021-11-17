@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 require_relative './rules/promo_generator'
 require 'json'
-require 'yaml'
 
+# class Checkout
 class Checkout
   # checkout constructor
   def initialize(path = 'config/datastore.json')
@@ -25,12 +27,11 @@ class Checkout
 
     total_price = 0
     @cart.each do |code, list|
-     total_price += price_per_item(code, list) * list.length
+      total_price += price_per_item(code, list) * list.length
     end
 
     total_price
   end
-
 
   private
 
@@ -46,7 +47,7 @@ class Checkout
   def price_per_item(code, list)
     return list.first['price'] unless discounts.include?(code)
 
-    @discounts[code].each do |name, rule|
+    @discounts[code].each do |_name, rule|
       return rule.apply_rule_to(list) if rule.applies_to(list)
     end
 
@@ -68,36 +69,36 @@ class Checkout
   end
 end
 
-ch_1 = Checkout.new
-ch_1.scan("VOUCHER")
-ch_1.scan("TSHIRT")
-ch_1.scan("MUG")
+ch_one = Checkout.new
+ch_one.scan('VOUCHER')
+ch_one.scan('TSHIRT')
+ch_one.scan('MUG')
 
-puts ch_1.total
+puts ch_one.total
 
-ch_2 = Checkout.new
-ch_2.scan("VOUCHER")
-ch_2.scan("TSHIRT")
-ch_2.scan("VOUCHER")
+ch_two = Checkout.new
+ch_two.scan('VOUCHER')
+ch_two.scan('TSHIRT')
+ch_two.scan('VOUCHER')
 
-puts ch_2.total
+puts ch_two.total
 
-ch_3 = Checkout.new
-ch_3.scan("TSHIRT")
-ch_3.scan("TSHIRT")
-ch_3.scan("VOUCHER")
-ch_3.scan("TSHIRT")
-ch_3.scan("TSHIRT")
+ch_three = Checkout.new
+ch_three.scan('TSHIRT')
+ch_three.scan('TSHIRT')
+ch_three.scan('VOUCHER')
+ch_three.scan('TSHIRT')
+ch_three.scan('TSHIRT')
 
-puts ch_3.total
+puts ch_three.total
 
-ch_4 = Checkout.new
-ch_4.scan("VOUCHER")
-ch_4.scan("TSHIRT")
-ch_4.scan("VOUCHER")
-ch_4.scan("VOUCHER")
-ch_4.scan("MUG")
-ch_4.scan("TSHIRT")
-ch_4.scan("TSHIRT")
+ch_four = Checkout.new
+ch_four.scan('VOUCHER')
+ch_four.scan('TSHIRT')
+ch_four.scan('VOUCHER')
+ch_four.scan('VOUCHER')
+ch_four.scan('MUG')
+ch_four.scan('TSHIRT')
+ch_four.scan('TSHIRT')
 
-puts ch_4.total
+puts ch_four.total
