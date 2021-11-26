@@ -31,7 +31,7 @@ ruby standard guidelines reported on [Ruby Style Guides](https://rubystyle.guide
 Added this gem in order to keep track of overall coverage tests results for the project.
 After running test, check the coverage report which is generated:
 ```
-  Coverage report generated for RSpec to /../../../../novicap/coverage. 178 / 178 LOC (100.0%) covered.
+  Coverage report generated for RSpec to /../../../../factory-store/coverage. 178 / 178 LOC (100.0%) covered.
 ```
 
 You can find a screenshot of the report in `coverage/assets`.
