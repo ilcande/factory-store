@@ -83,9 +83,9 @@ rvm use 2.4.4
 ```
 
 ## Installation
-Unzip the repo and then:
+Clone the repo and then:
 ```
-  $ cd novicap
+  $ cd factory-store
 ```
 execute:
 ```
